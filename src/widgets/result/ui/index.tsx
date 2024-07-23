@@ -1,10 +1,10 @@
+import { AnnualData } from 'shared/models';
+import { Table } from 'shared/ui/table/ui';
+
+import { tableColumns } from '../config/table-columns.ts';
+
 type ResultProps = {
-  annualData: {
-    year: number,
-    interest: number,
-    valueEndOfYear: number,
-    contribution: number,
-  }[]
+  annualData: AnnualData[]
 }
 
 export function Result({ annualData }: ResultProps) {
@@ -13,32 +13,10 @@ export function Result({ annualData }: ResultProps) {
   }
 
   return (
-    <>
-      <table>
-        <thead>
-          <tr>
-            <th>Year</th>
-            <th>Interest</th>
-            <th>Value End Of Year</th>
-            <th>Contribution</th>
-          </tr>
-        </thead>
-        <tbody>
-          {annualData.map(({
-            year,
-            interest,
-            valueEndOfYear,
-            contribution,
-          }) => (
-            <tr key={year}>
-              <td>{year}</td>
-              <td>{interest}</td>
-              <td>{valueEndOfYear}</td>
-              <td>{contribution}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </>
+    <Table<AnnualData>
+      index="year"
+      columns={tableColumns}
+      data={annualData}
+    />
   );
 }

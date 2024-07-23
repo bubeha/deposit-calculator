@@ -2,7 +2,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { Button } from 'shared/ui/button';
 import { Input } from 'shared/ui/form/input';
 import { Col, Row } from 'shared/ui/grid';
-import { Inputs } from 'widgets/header/config/inputs';
+import { Inputs } from 'widgets/header/types/inputs';
 
 import { Header as StyledHeader } from './header.styled';
 

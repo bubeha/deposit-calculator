@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: {browser: true, es2020: true},
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -29,10 +29,10 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'react/react-in-jsx-scope': 'off',
-    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx', '.ts', '.tsx'] }],
+    'react/jsx-filename-extension': [1, {'extensions': ['.js', '.jsx', '.ts', '.tsx']}],
     'react-refresh/only-export-components': [
       'warn',
-      { allowConstantExport: true },
+      {allowConstantExport: true},
     ],
     // increase the severity of rules so they are auto-fixable
     'simple-import-sort/imports': 'error',
@@ -68,6 +68,7 @@ module.exports = {
         'react/jsx-props-no-spreading': 'off',
         'react/prop-types': 'off',
         'no-plusplus': 'off',
+        'max-len': ['error', {'code': 120}]
       },
     },
   ],

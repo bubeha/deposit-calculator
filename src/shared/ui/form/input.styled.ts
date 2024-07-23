@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const FormGroup = styled.div`
-  padding: 0 1rem;
-
   label {
     margin-bottom: 0.375rem;
     display: inline-block;
